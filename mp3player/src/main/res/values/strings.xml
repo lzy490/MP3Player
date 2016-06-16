@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">mp3Player</string>
+    <string name="about">关于</string>
+    <string name="refresh">刷新列表</string>
+</resources>
