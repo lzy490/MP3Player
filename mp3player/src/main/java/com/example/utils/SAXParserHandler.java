@@ -20,7 +20,6 @@ public class SAXParserHandler extends DefaultHandler {
 
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("start document");
         list = new ArrayList<Song>();
     }
 
@@ -59,6 +58,18 @@ public class SAXParserHandler extends DefaultHandler {
         if (currentTag == "lrc.size") {
             if (!str.equals("/n") && !str.trim().equals("")) {
                 song.setLrc_size(Float.parseFloat(str));
+            }
+        }
+
+        if (currentTag == "lrc.name.en") {
+            if (!str.equals("/n") && !str.trim().equals("")) {
+                song.setLrc_name_en(str);
+            }
+        }
+
+        if (currentTag == "song.name.en") {
+            if (!str.equals("/n") && !str.trim().equals("")) {
+                song.setSong_name_en(str);
             }
         }
 
